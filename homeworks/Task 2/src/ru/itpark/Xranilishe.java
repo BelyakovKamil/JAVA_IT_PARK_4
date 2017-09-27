@@ -50,7 +50,7 @@ public class Xranilishe {
 
                         case 2:
 
-                            metka2: { // Метки: 2, 3 , 4 - созданны для того, чтобы занво не выбирать команду из-за некритической ошибки
+                        metka2: { // Метки: 2, 3 , 4 - созданны для того, чтобы занво не выбирать команду из-за некритической ошибки
 
                             if (count == 100) {
                                 System.out.println("Ошибка!!! Массив заполнен!!!");
@@ -73,13 +73,12 @@ public class Xranilishe {
                                 }
                             }
                             break metka;
-                            }
+                        }
 
 
 
                         case 3:
-
-                            metka3: {
+                        metka3: {
 
                             if (count == 100) {
                                 System.out.println("Ошибка!!! Массив заполнен!!!");
@@ -96,15 +95,13 @@ public class Xranilishe {
                                     for (i = 0; i < 100; i++) {
                                         if (array[i] == 0) {
                                             array[i] = e;
+                                            count++;
                                             break metka;
                                         }
                                     }
                                 }
-                                count++;
-
                             }
-                            break metka;
-                            }
+                        }
 
 
 
