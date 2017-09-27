@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Xranilishe {
     public static void main(String[] args) {
         int[] array = new int[100];
-        int count = 0, i =0;
+        int count = 0, i = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("МЕНЮ:");
         System.out.println("1. Показать массив");
@@ -17,7 +17,8 @@ public class Xranilishe {
 
         while (true) {
 
-            metka: { // Мтеку создал ,чтобы при ошибке, возвращаться к выводу сообщения
+            metka:
+            { // Мтеку создал ,чтобы при ошибке, возвращаться к выводу сообщения
 
                 System.out.println("Что нужно сделать?");
 
@@ -25,17 +26,15 @@ public class Xranilishe {
 
                 switch (command) {
                     case 1:
-                        if (count == 0){
+                        if (count == 0) {
                             System.out.println("ОШИБКА!!! Массив пустой!!!");
                             System.out.println();
                             break metka;
-                        }
-                        else {
+                        } else {
                             if (count > 100) {
                                 System.out.println("ОШИБОЧКА!!! Перебор!!!");
                                 System.exit(0);
-                            }
-                            else {
+                            } else {
                                 System.out.println("Количество элементов в массиве " + count);
                                 System.out.println();
                                 for (i = 0; i < 100; i++) {
@@ -47,10 +46,10 @@ public class Xranilishe {
                         }
 
 
+                    case 2:
 
-                        case 2:
-
-                        metka2: { // Метки: 2, 3 , 4 - созданны для того, чтобы занво не выбирать команду из-за некритической ошибки
+                        metka2:
+                        { // Метки: 2, 3 , 4 - созданны для того, чтобы занво не выбирать команду из-за некритической ошибки
 
                             if (count == 100) {
                                 System.out.println("Ошибка!!! Массив заполнен!!!");
@@ -59,12 +58,11 @@ public class Xranilishe {
                             } else {
                                 System.out.println("Какое число добавить в начало?");
                                 int b = scanner.nextInt();
-                                if(b == 0){
+                                if (b == 0) {
                                     System.out.println("Ошибка!!! Введите другое значение!!!");
                                     System.out.println();
                                     break metka2;
-                                }
-                                else {
+                                } else {
                                     for (i = 99; i > 0; i--) {
                                         array[i] = array[i - 1];
                                     }
@@ -76,9 +74,9 @@ public class Xranilishe {
                         }
 
 
-
-                        case 3:
-                        metka3: {
+                    case 3:
+                        metka3:
+                        {
 
                             if (count == 100) {
                                 System.out.println("Ошибка!!! Массив заполнен!!!");
@@ -104,16 +102,15 @@ public class Xranilishe {
                         }
 
 
+                    case 4:
 
-                        case 4:
-
-                            metka4: {
-                            if (count == 0){
+                        metka4:
+                        {
+                            if (count == 0) {
                                 System.out.println("ОШИБКА!!! Массив пустой!!!");
                                 System.out.println();
                                 break metka;
-                            }
-                            else {
+                            } else {
 
                                 System.out.println("Какой номер удалить?");
                                 int d = scanner.nextInt();
@@ -122,21 +119,14 @@ public class Xranilishe {
                                     System.out.println();
                                     break metka4;
                                 } else {
-                               /*for (i= 0; i<100; i++){
-                                    if (array[i] ==0) {
-                                        int nd= i-1;
-                                        break;
-                                    }
-                                }
-                                */
                                     for (d = d; d < 100; d++) {
-                                        array[d-1] = array[d];
+                                        array[d - 1] = array[d];
                                     }
                                     count--;
                                 }
                                 break;
                             }
-                            }
+                        }
 
                     case 5:
                         System.exit(0);
