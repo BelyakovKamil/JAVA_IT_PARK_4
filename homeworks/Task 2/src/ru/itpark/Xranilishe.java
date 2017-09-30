@@ -49,7 +49,7 @@ public class Xranilishe {
                     case 2:
 
                         metka2:
-                        { // Метки: 2, 3 , 4 - созданны для того, чтобы занво не выбирать команду из-за некритической ошибки
+                        { // Метки: 2, 3 , 4 - созданны для того, чтобы заново не выбирать команду из-за некритической ошибки
 
                             if (count == 100) {
                                 System.out.println("Ошибка!!! Массив заполнен!!!");
@@ -114,15 +114,19 @@ public class Xranilishe {
 
                                 System.out.println("Какой номер удалить?");
                                 int d = scanner.nextInt();
-                                if (d < 0 || d > 99) {
+                                if (d < 0 || d > 100) {
                                     System.out.println("ОШИБКА!!! Выход за границы массива!!!");
                                     System.out.println();
                                     break metka4;
                                 } else {
-                                    for (d = d; d < 100; d++) {
-                                        array[d - 1] = array[d];
+                                    if (array[d - 1] == 0) {
+                                        System.out.println("Ошибка!!! Он и так пустой!!!");
+                                    } else {
+                                        for (d = d; d < 100; d++) {
+                                            array[d - 1] = array[d];
+                                        }
+                                        count--;
                                     }
-                                    count--;
                                 }
                                 break;
                             }
