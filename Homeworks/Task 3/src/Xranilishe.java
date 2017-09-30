@@ -77,14 +77,12 @@ public class Xranilishe {
             System.out.println("ОШИБКА!!! Выход за границы массива");
             System.out.println();
             k = false;
-        }
-        else {
-            if (a[number-1] == 0) {
+        } else {
+            if (a[number - 1] == 0) {
                 System.out.println("ОШИБКА!!! Он и так пуст!!!");
                 System.out.println();
                 k = false;
-            }
-            else {
+            } else {
                 for (int i = number; i < 100; i++) {
                     a[i - 1] = a[i];
                     k = true;
@@ -180,8 +178,26 @@ public class Xranilishe {
                         }
                         break;
 
-                        case 5:
+                    case 5:
 
+                        if (count == 0) {
+                            System.out.println("ОШИБКА!!! Массив пустой!!!");
+                            System.out.println();
+                            break metka;
+                        } else {
+                            for (int i = 1; i < count; i++) {
+                                for (int j = i; j > 0 ; j--) {
+                                    if (array[j - 1] > array[j]) {
+                                        int t = array[j];
+                                        array[j] = array[j - 1];
+                                        array[j - 1] = t;
+                                    }
+                                }
+                            }
+                                System.out.println(" ОТСОРТИРОВАННО!!! ");
+
+                        }
+                        break metka;
 
 
                     case 6:
